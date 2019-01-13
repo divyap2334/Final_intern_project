@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<!-- Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<title>Strings</title>
+		<style>
+		.heading
+		{
+		background-image:url('images.jpg');
+		height:300px;
+		}
+		.st{
+		padding-top:100px;
+		text-align:center;
+		color:white;
+		font-weight:bold;
+		font-size:80px;}
+		blockquote{
+		font-weight:bold;
+		padding-left:30px;}
+		h2{
+		color:#CB028E;}
+		</style>
+	</head>
+	<body>
+	<div class="heading">
+	<h1 class="st">STRINGS</h1>
+	</div>
+	<div class="rem">
+	<blockquote><h2>Python String:</h2></br></br>
+
+Strings are sequences of characters. Your name can be considered a string. Or, say you live in Zambia, then your country name is "Zambia", which is a string.</br></br>
+
+In this tutorial you will see how strings are treated in Python, the different ways in which strings are represented in Python, and the ways in which you can use strings in your code.</br>
+<h2>How to create a string and assign it to a variable</h2></br></br>
+
+To create a string, put the sequence of characters inside either single quotes, double quotes, or triple quotes and then assign it to a variable. You can look into how variables work in Python in the Python variables tutorial.</br></br>
+
+For example, you can assign a character ‘a’ to a variable single_quote_character. Note that the string is a single character and it is “enclosed” by single quotes.</br></br>
+
+>>> single_quote_character = 'a'</br>
+>>> print(single_quote_character)</br>
+a</br>
+>>> print(type(single_quote_character)) # check the type of the variable.</br>
+<class 'str'></br></br>
+
+Similarly, you can assign a single character to a variable double_quote_character. Note that the string is a single character but it is “enclosed” by double quotes.</br></br>
+
+>>> double_quote_character = "b"</br>
+>>> print(double_quote_character)</br>
+b</br>
+>>> print(type(double_quote_character))</br>
+<class 'str'></br></br>
+
+Also check out if you can assign a sequence of characters or multiple characters to a variable. You can assign both single quote sequences and double quote sequences.</br></br>
+
+>>> double_quote_multiple_characters = "aeiou"</br>
+>>> single_quote_multiple_characters = 'aeiou'</br>
+>>> print(type(double_quote_multiple_characters), type(single_quote_multiple_characters))</br>
+<class 'str'> <class 'str'></br></br>
+
+Interestingly if you check the equivalence of one to the other using the keyword is, it returns True.</br></br>
+
+>>> print(double_quote_multiple_characters is double_quote_multiple_characters</br>
+True</br>
+
+Take a look at assignment of strings using triple quotes and check if they belong to the class str as well.</br></br>
+
+>>> triple_quote_example = """this is a sentence written in triple quotes"""</br>
+>>> print(type(triple_quote_example))</br>
+<class 'str'></br></br>
+
+In the examples above, the function type is used to show the underlying class that the object will belong to. Please note that all the variables that have been initiated with single, double, or triple quotes are taken as string. You can use single and double quotes for a single line of characters. Multiple lines are generally put in triple quotes.</br>
+<h2>String common methods</h2></br></br>
+
+    <h3>Get the index of a substring in a string.</h3></br></br>
+
+    # find the index of a "c" in a string "abcde"</br>
+    >>>  "abcde".index("c")</br>
+    2</br></br>
+
+2 is returned because the position of the individual letters in the strings is 0-indexed. So, index of "a" in "abcde" is 0, that of "b" is 1, and so on.</br></br>
+
+    <h3>Test if a substring is a member of a larger string. This is done using the keyword in and writing the test.</br> The skeleton is shown below.</br></br>
+
+    substring in string</h3></br></br>
+
+    >>> # for example, test if string "i" is present in string "pythonic" at least once. "i" is present in the string. Therefore, the result should be true.</br>
+    >>>  "i" in "pythonic"</br>
+    True</br>
+    >>> # as "x" is not present in the string "pythonic" the below test should return false</br>
+    >>> "x" in "pythonic" # "x" is not present in "pythonic"</br>
+    False</br></br>
+
+    Join a list of strings using the join method. A list of strings is written by delimiting the sequence with a comma ,, and enclosing the whole group with brackets [...]. For a more detailed tutorial on lists head over to the python lists tutorial. You can join a list of strings by giving the delimiter as the object on which the method join will act and the list of strings as the argument.</br></br>
+
+    >>> # join a list of strings 1, 2, 3 with a space as a delimiter and 1,2,3 as the list of strings. So, the result will be the strings with spaces between them.</br>
+    >>>  combined_string = " ".join(["1", "2", "3"])</br>
+    '1 2 3'</br></br>
+
+    Break a string based on some rule. This takes in the string as the object on which the method split is passed using the dot operator. Splitting takes a space as the default parameter.</br></br>
+
+<h3>For example you can split a string based on the spaces between the individual values.</h3></br></br>
+
+    >>> # split the string "1 2 3" and return a list of the numbers.</br>
+    >>>  "1 2 3".split() # splitting</br>
+    ['1', '2', '3']</br></br>
+
+<h3>Or you can split a string based on a delimiter like :.</h3></br></br>
+
+     >>> “1:2:3”.split(“:”)</br>
+     [‘1’, ‘2’, ‘3’]</br>
+
+    Access individual characters in a string. Note the first element has index 0. You access the first element with the index 0, second element with the index 1, and so on.</br></br>
+
+    >>>  lang = "python"</br>
+    >>>  print(lang[0])</br>
+    >>>  print(lang[2]) # access the 3rd letter</br>
+    't'</br>
+    >>>  print(lang[-3]) # access the third letter from the end.</br>
+    'h'</br></br>
+
+<h2>Formatting in String:</h2></br></br>
+
+String object can be formatted. You can use %s as a formatter which will enable you to insert different values into a string at runtime and thus format the string. The %s symbol is replaced by whatever is passed to the string.</br></br>
+
+    >>>  print("I love %s in %s" % ("programming", "Python")) # templating strings</br>
+    'I love programming in Python'</br></br>
+
+You can also use the keyword format. This will enable you to set your own formatters instead of %s.</br></br>
+
+>>> print("I love {programming} in {python}".format(programming="programming", python="Python"))</br>
+'I love programming in Python'</br></br>
+
+<h2>Truth value testing of String</h2></br></br>
+
+A string is considered to be true in Python if it is not an empty string. So, we get the following:</br></br>
+
+# Test truth value of empty string</br>
+>>>  print(bool(""))</br>
+False</br></br>
+
+# Test truth value of non-empty string "x"</br>
+>>>  print(bool("x"))</br>
+True</br></blockquote>
+	</div>
+	</body>
+</html>
